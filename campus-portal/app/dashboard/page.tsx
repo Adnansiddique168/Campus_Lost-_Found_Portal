@@ -1331,7 +1331,7 @@ function RewardsView({ user }: { user: any }) {
   const rewards = [
     { title: "10% Cafeteria Discount", cost: 100, icon: "🍔", bg: "bg-orange-50 text-orange-600" },
     { title: "20 Pages Free Printing", cost: 150, icon: "🖨️", bg: "bg-blue-50 text-blue-600" },
-    { title: "Appreciation Certificate", cost: 500, icon: "🏅", bg: "bg-yellow-50 text-yellow-600" }
+    { title: "Campus Official Merchandise", cost: 500, icon: "🎁", bg: "bg-purple-50 text-purple-600" }
   ];
 
   return (
