@@ -1,3 +1,4 @@
+export const dynamic = 'force-dynamic';
 import { NextRequest, NextResponse } from "next/server";
 
 const SYSTEM_PROMPT = `You are the official AI Smart Assistant for the "Campus Lost & Found Portal" of Lahore Garrison University (LGU). 
