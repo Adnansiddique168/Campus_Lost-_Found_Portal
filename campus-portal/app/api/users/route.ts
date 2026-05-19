@@ -2,7 +2,6 @@ export const dynamic = 'force-dynamic';
 import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 
-export const dynamic = 'force-dynamic';
 
 export async function GET() {
   try {
@@ -79,3 +78,4 @@ export async function DELETE(request: NextRequest) {
     return NextResponse.json({ error: "Failed to delete user" }, { status: 500 });
   }
 }
+

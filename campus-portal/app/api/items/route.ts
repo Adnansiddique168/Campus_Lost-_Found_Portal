@@ -3,7 +3,6 @@ import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 import { sendEmail } from "@/lib/email";
 
-export const dynamic = 'force-dynamic';
 
 export async function GET() {
   try {
@@ -98,3 +97,4 @@ export async function DELETE(request: NextRequest) {
     return NextResponse.json({ error: "Failed to delete item" }, { status: 500 });
   }
 }
+
