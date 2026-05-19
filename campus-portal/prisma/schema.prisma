@@ -1,0 +1,89 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model Student {
+  id               Int      @id @default(autoincrement())
+  fullName         String
+  email            String   @unique
+  passwordHash     String
+  contactNo        String
+  rollNumber       String?
+  department       String?
+  section          String?
+  points           Int      @default(0)
+  resetToken       String?
+  resetTokenExpiry DateTime?
+  claims           Claim[]
+}
+
+model Admin {
+  id               Int      @id @default(autoincrement())
+  fullName         String
+  email            String   @unique
+  passwordHash     String
+  contactNo        String
+  resetToken       String?
+  resetTokenExpiry DateTime?
+}
+
+model LostItem {
+  id          Int      @id @default(autoincrement())
+  title       String
+  description String?
+  category    String?
+  location    String?
+  date        String?
+  image       String?
+  userEmail   String?
+  status      String   // "Pending" or "Approved"
+  aiTags      String?
+}
+
+model FoundItem {
+  id          Int      @id @default(autoincrement())
+  title       String
+  description String?
+  category    String?
+  location    String?
+  date        String?
+  image       String?
+  userEmail   String?
+  status      String   // "Pending" or "Approved"
+  aiTags      String?
+  claims      Claim[]
+}
+
+model Claim {
+  id          Int  @id @default(autoincrement())
+  studentId   Int
+  foundItemId Int
+  student     Student   @relation(fields: [studentId], references: [id])
+  foundItem   FoundItem @relation(fields: [foundItemId], references: [id])
+}
+
+model CctvRequest {
+  id             Int      @id @default(autoincrement())
+  userEmail      String
+  location       String
+  date           String
+  timeRange      String
+  reason         String
+  status         String
+  scheduledSlot  String?
+  createdAt      DateTime @default(now())
+}
+
+model Message {
+  id            Int      @id @default(autoincrement())
+  senderEmail   String
+  receiverEmail String
+  content       String
+  createdAt     DateTime @default(now())
+  read          Boolean  @default(false)
+}

@@ -1,0 +1,28 @@
+# Features Added Since May 1st, 2026
+
+This document outlines the major features, modules, and updates integrated into the Campus Lost & Found Portal (Web & Mobile) starting from May 1st, 2026 onwards.
+
+### 1. Artificial Intelligence (AI) Image Categorization
+* **Date Range:** Early May (May 1 - May 9)
+* **Description:** Successfully integrated a Machine Learning (ML) model into the portal. 
+* **Functionality:** This AI vision model automatically scans uploaded images of lost or found items and predicts the correct category. This drastically reduces manual effort for users and ensures items are classified accurately, improving the search and filter functionalities.
+
+### 2. Gamification: Auto-Reward Points System
+* **Date Range:** Mid May (May 14)
+* **Description:** Implemented an automated gamification feature to encourage student participation.
+* **Functionality:** When a finder returns a lost item to its rightful owner and the item's status is successfully updated to "Claimed/Returned", the system automatically awards reward points to the finder. This fosters a helpful and honest campus community.
+
+### 3. Real-Time In-App Chat Notifications
+* **Date Range:** Mid May (May 14)
+* **Description:** Upgraded the built-in chat system with real-time alerts.
+* **Functionality:** Users (both owners and finders) now receive instant in-app notifications whenever a new message is received in the chat. This ensures seamless and prompt communication for the recovery of lost items without needing to manually check the chat box.
+
+### 4. Complete Student Signup Flow & Backend Integration
+* **Date Range:** Mid May (May 14)
+* **Description:** Finalized the comprehensive registration flow for students.
+* **Functionality:** Updated the signup UI and integrated it completely with the backend API and state management. The system now securely captures, validates, and stores detailed academic information including **Roll No, Department, and Section** into the central database during account creation.
+
+### 5. Category System Optimization
+* **Date Range:** Mid May (May 12 - May 14)
+* **Description:** Refined the item categorization options across both web and mobile platforms.
+* **Functionality:** Removed the "Keys" option from the hardcoded category selection menus. This change was implemented to streamline the choices for users and specifically to optimize the accuracy of the new AI vision categorization logic.
